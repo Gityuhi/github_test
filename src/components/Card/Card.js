@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import { Link } from "react-router-dom";
 const Card = ({ pokemon }) => {
   return (
     <div className="card">
@@ -29,7 +30,9 @@ const Card = ({ pokemon }) => {
             アビリティ：{pokemon.abilities[0].ability.name}
           </p>
         </div>
-        <button className="cardButton">詳細</button>
+        <button className="cardButton">
+          <Link to={`/pokemon/${pokemon.id}`}>詳細</Link>
+        </button>
       </div>
     </div>
   );
