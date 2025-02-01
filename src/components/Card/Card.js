@@ -1,11 +1,11 @@
 import React from "react";
 import "./Card.css";
-import { Link } from "react-router-dom";
-const Card = ({ pokemon }) => {
+
+const Card = ({ pokemon, openModal }) => {
   return (
     <div className="card">
       <div className="cardImg">
-        <img src={pokemon.sprites.front_default} alt="" />
+        <img src={pokemon.sprites.front_default} alt={pokemon.name} />
       </div>
       <h3 className="cardName">{pokemon.name}</h3>
       <div className="cardTypes">
@@ -20,18 +20,18 @@ const Card = ({ pokemon }) => {
       </div>
       <div className="cardInfo">
         <div className="cardData">
-          <p className="title">重さ：{pokemon.weight}</p>
+          <p className="title">重さ：{pokemon.weight / 10} kg</p>
         </div>
         <div className="cardData">
-          <p className="title">高さ：{pokemon.height}</p>
+          <p className="title">高さ：{pokemon.height / 10} m</p>
         </div>
         <div className="cardData">
           <p className="title">
             アビリティ：{pokemon.abilities[0].ability.name}
           </p>
         </div>
-        <button className="cardButton">
-          <Link to={`/pokemon/${pokemon.id}`}>詳細</Link>
+        <button className="cardButton" onClick={() => openModal(pokemon)}>
+          詳細
         </button>
       </div>
     </div>
