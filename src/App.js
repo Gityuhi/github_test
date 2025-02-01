@@ -13,6 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetchPokemonData = async () => {
+      // ポケモンのすべてのデータを取得
       let res = await getAllPokemon(initialURL);
       loadPokemon(res.results);
       // console.log(res.results);
@@ -47,7 +48,7 @@ function App() {
   };
 
   const handlePrevPage = async () => {
-    if(!prevURL) return;
+    if (!prevURL) return;
 
     setLoading(true);
     let data = await getAllPokemon(prevURL);
