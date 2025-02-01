@@ -60,3 +60,13 @@
   margin: 5px 0;
   font-size: 14px;
 }
+
+.cardButton {
+  background-color: #4a4a4a;
+  color: orange;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}

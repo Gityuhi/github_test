@@ -29,6 +29,7 @@ const Card = ({ pokemon }) => {
             アビリティ：{pokemon.abilities[0].ability.name}
           </p>
         </div>
+        <button className="cardButton">詳細</button>
       </div>
     </div>
   );
