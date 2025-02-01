@@ -64,11 +64,12 @@
 .cardButton {
   background-color: #4a4a4a;
   border: none;
-  padding: 0;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
   transition: all 0.3s;
+  color: orange;
 }
 
 .cardButton:hover {
